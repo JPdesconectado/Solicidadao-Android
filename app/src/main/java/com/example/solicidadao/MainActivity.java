@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<SolicitacaoEducacao>> call, Throwable t) {
-                System.out.println("BUCETÃO MANO 2");
                 Toast.makeText(getApplicationContext(),t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
