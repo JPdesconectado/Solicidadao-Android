@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="368dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.261">
+
+        <EditText
+            android:id="@+id/reg_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif-light"
+            android:hint="Nome de Usuário"
+            android:inputType="textPersonName"
+            android:textColor="#FF192133"
+            android:textColorHint="#A0192133" />
+
+        <EditText
+            android:id="@+id/reg_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif-light"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:textColor="#FF192133"
+            android:textColorHint="#A0192133" />
+
+        <EditText
+            android:id="@+id/reg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif-light"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:textColor="#FF192133"
+            android:textColorHint="#A0192133" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:text="Cadastrar"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:text="Entrar"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="227dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_register" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

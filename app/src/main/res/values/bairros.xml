@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="string_array_bairros">
+    <item>Agua Verde</item>
+    <item>Alto Frigorifico</item>
+    <item>Alto da Tijuca</item>
+    <item>Alto das Palmeiras</item>
+    <item>Boa Vista</item>
+    <item>Campo dAgua Verde</item>
+    <item>Centro</item>
+    <item>Industrial 1</item>
+    <item>Industrial 2</item>
+    <item>Jardim Esperanca</item>
+    <item>Marcílio Dias</item>
+    <item>Piedade</item>
+    <item>Sossego</item>
+
+    </string-array>
+</resources>
+
