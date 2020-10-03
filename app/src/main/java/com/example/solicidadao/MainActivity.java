@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -55,9 +57,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<SolicitacaoEducacao>>  call, Response<List<SolicitacaoEducacao>>  response) {
                 if (response.body() != null){
+                    SharedPreferences preferences = getApplicationContext().getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor prefLoginEdit = preferences.edit();
                     List<SolicitacaoEducacao> solicitacaoEducacaos = response.body();
+                    int id = response.body().get(0).getNome();
+                    prefLoginEdit.putInt("id", id);
+                    prefLoginEdit.commit();
                     for (SolicitacaoEducacao solicitacaoEducacao : solicitacaoEducacaos)
                         adapter.insertSolicitacaoEducacao(solicitacaoEducacao);
+
                 }
             }
 
@@ -70,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void insertSolicitacaoEducacao(SolicitacaoEducacao solicitacaoEducacao){
         Call<SolicitacaoEducacao> call = jsonPlaceHolderApi.insertSolicitacaoEducacao(
-                3,
+                solicitacaoEducacao.getNome(),
                 solicitacaoEducacao.getCpf(),
                 solicitacaoEducacao.getRg()
                 );

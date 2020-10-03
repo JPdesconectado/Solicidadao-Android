@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(check){
             String token = preferences.getString("token", null);
             if(token != null){
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                startActivity(new Intent(LoginActivity.this, descricaoActivity.class));
             }
         }
     }
@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         prefLoginEdit.putString("token", token);
                         prefLoginEdit.commit();
                         Toast.makeText(getApplicationContext(), token, Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this, descricaoActivity.class));
                     }else {
                         Toast.makeText(getApplicationContext(), "Usuário ou Senha Incorretos.", Toast.LENGTH_SHORT).show();
                 }

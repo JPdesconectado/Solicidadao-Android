@@ -1,7 +1,9 @@
 package com.example.solicidadao;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,6 +51,9 @@ public class InserirSolicitacaoEducacaoActivity extends AppCompatActivity {
             Bundle bundle = new Bundle();
             if (requestCode==MainActivity.REQUEST_EDITAR_SOLICITACAOEDUCACAO)
                 bundle.putInt("position", position);
+            SharedPreferences preferences = getApplicationContext().getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+            int id = preferences.getInt("id", 0);
+            solicitacaoEducacao.setNome(id);
             solicitacaoEducacao.setCpf(ed_cpf.getText().toString());
             solicitacaoEducacao.setRg(ed_rg.getText().toString());
             bundle.putSerializable("solicitacaoEducacao", solicitacaoEducacao);
